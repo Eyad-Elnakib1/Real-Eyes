@@ -1,0 +1,162 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Real Eyes — report</title>
+    <style>
+      html, body {
+        margin: 0;
+        background: #0d1117;
+        color: #ecf0f7;
+        font-family: system-ui, sans-serif;
+        min-height: 100%;
+      }
+      header {
+        padding: 18px 28px;
+        background: #111a18;
+        border-bottom: 1px solid #1e2d2a;
+        display: flex;
+        align-items: center;
+        gap: 14px;
+      }
+      header .dot { width: 10px; height: 10px; border-radius: 50%; background: #1dcea0; }
+      header h1   { margin: 0; font-size: 15px; letter-spacing: 1px; color: #1dcea0; }
+
+      main { padding: 28px; }
+
+      .region {
+        margin-bottom: 36px;
+        padding-bottom: 24px;
+        border-bottom: 1px solid #1e2d2a;
+      }
+      .region:last-child { border-bottom: 0; }
+
+      .region-title {
+        font-size: 13px;
+        letter-spacing: 1px;
+        color: #7ab5a0;
+        text-transform: uppercase;
+        margin: 0 0 16px;
+      }
+      .region-title .label { color: #1dcea0; }
+      .region-title .label.fake { color: #e05a5a; }
+
+      .grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 24px;
+        align-items: start;
+        justify-items: center;
+      }
+      @media (min-width: 1100px) {
+        .grid { grid-template-columns: 1fr 1fr; }
+      }
+      .card h2 {
+        margin: 0 0 10px;
+        font-size: 12px;
+        letter-spacing: 1px;
+        color: #7ab5a0;
+        text-transform: uppercase;
+      }
+      img {
+        max-width: 100%;
+        height: auto;
+        border: 1px solid #1e2d2a;
+        border-radius: 6px;
+        display: block;
+      }
+
+      /* ── Text-claim verdict cards (compact verdict.html styling) ── */
+      .text-section {
+        margin-bottom: 40px;
+        padding-bottom: 24px;
+        border-bottom: 1px solid #1e2d2a;
+      }
+      .text-card {
+        position: relative;
+        border: 1px solid #1e2d2a;
+        border-radius: 14px;
+        padding: 22px 22px 18px;
+        margin-bottom: 18px;
+        background: linear-gradient(180deg, rgba(255,255,255,0.02), transparent 60%), #131a2b;
+      }
+      .text-card .row {
+        display: flex; flex-wrap: wrap; align-items: center;
+        gap: 18px; margin-bottom: 14px;
+      }
+      .text-card .badge {
+        font-size: 22px; font-weight: 800; letter-spacing: 1px;
+        padding: 10px 16px; border-radius: 10px;
+        border: 1px solid var(--accent);
+        color: var(--accent);
+        background: var(--accent-bg);
+        text-transform: uppercase;
+        display: flex; align-items: center; gap: 10px;
+      }
+      .text-card .conf {
+        font-size: 26px; font-weight: 800; color: #ecf2ff; letter-spacing: 1px;
+      }
+      .text-card .conf small {
+        display: block; font-size: 10px; font-weight: 400;
+        letter-spacing: 2px; color: #8aa1c8;
+      }
+      .text-card .source-pill {
+        margin-left: auto;
+        padding: 6px 12px; border-radius: 999px;
+        font-size: 10px; letter-spacing: 2px; color: #8aa1c8;
+        border: 1px solid #1e2a44;
+      }
+      .text-card .verified-pill {
+        padding: 6px 12px; border-radius: 999px;
+        font-size: 11px; letter-spacing: 1px;
+        border: 1px solid var(--accent);
+        color: var(--accent);
+        background: var(--accent-bg);
+      }
+      .text-card .verified-pill.unverified { color: #8aa1c8; border-color: #1e2a44; background: transparent; }
+      .text-card .claim {
+        padding: 12px 14px;
+        border-left: 3px solid var(--accent);
+        background: rgba(255,255,255,0.03);
+        border-radius: 6px;
+        font-size: 14px; line-height: 1.5; color: #ecf2ff;
+        white-space: pre-wrap; word-break: break-word;
+        margin-bottom: 10px;
+      }
+      .text-card .claim small {
+        display:block; color:#8aa1c8; font-size:10px; letter-spacing:2px; margin-bottom:4px;
+      }
+      .text-card .statement { color: #8aa1c8; font-size: 13px; margin-bottom: 14px; }
+      .text-card .bar {
+        height: 6px; border-radius: 999px; background: rgba(255,255,255,0.05);
+        position: relative; overflow: hidden; margin-bottom: 14px;
+      }
+      .text-card .bar .fill {
+        position:absolute; left:0; top:0; bottom:0;
+        background: var(--accent); box-shadow: 0 0 14px var(--accent);
+      }
+      .src-line {
+        display: flex; gap: 10px; align-items: center;
+        font-size: 12px; padding: 8px 10px;
+        border-top: 1px solid #1e2a44;
+      }
+      .src-line a { color: #ecf2ff; text-decoration: none; }
+      .src-line a:hover { color: #1dcea0; }
+      .nli-chip {
+        padding: 2px 7px; border-radius: 5px; font-size: 10px; letter-spacing: 1px;
+        border: 1px solid currentColor;
+      }
+      .nli-chip.supports { color: #1dcea0; }
+      .nli-chip.refutes  { color: #ef4444; }
+      .nli-chip.nei      { color: #f59e0b; }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="dot"></div>
+      <h1>REAL EYES — DETECTION REPORT</h1>
+    </header>
+    <main id="root"></main>
+    <script src="report.js"></script>
+  </body>
+</html>

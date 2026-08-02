@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Real Eyes</title>
+    <style>
+      body { font-family: system-ui, sans-serif; width: 280px; padding: 12px; }
+      h1 { font-size: 14px; margin: 0 0 8px; }
+      .row { font-size: 12px; margin: 4px 0; word-break: break-all; }
+      .label { color: #666; }
+      .val { color: #111; }
+      button { margin-top: 10px; width: 100%; padding: 6px; cursor: pointer; }
+      img.preview { max-width: 100%; max-height: 120px; margin-top: 6px; border: 1px solid #ddd; }
+    </style>
+  </head>
+  <body>
+    <h1>Real Eyes</h1>
+    <div class="row"><span class="label">type:</span> <span id="type" class="val">—</span></div>
+    <div class="row"><span class="label">image:</span> <span id="image" class="val">null</span></div>
+    <div class="row"><span class="label">text:</span> <span id="text" class="val">null</span></div>
+    <div class="row"><span class="label">screenshot:</span> <span id="screenshot" class="val">null</span></div>
+    <img id="preview" class="preview" style="display:none" />
+    <div class="row"><span class="label">model:</span> <span id="model" class="val">—</span></div>
+    <button id="clear">Clear</button>
+    <script type="module" src="popup.js"></script>
+  </body>
+</html>

@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Real Eyes — analyzing…</title>
+    <style>
+      html, body {
+        margin: 0;
+        height: 100%;
+        background: #111621;
+        color: #ecf0f7;
+        font-family: system-ui, sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+      }
+      .ring {
+        width: 64px;
+        height: 64px;
+        border: 6px solid #283042;
+        border-top-color: #00e5ff;
+        border-radius: 50%;
+        animation: spin 0.9s linear infinite;
+      }
+      @keyframes spin { to { transform: rotate(360deg); } }
+      h1 { font-size: 18px; margin: 0; letter-spacing: 1px; }
+      p  { color: #94a0b8; margin: 0; font-size: 13px; max-width: 600px; text-align: center; padding: 0 16px; }
+      .err { color: #f87171; }
+    </style>
+  </head>
+  <body>
+    <div class="ring" id="ring"></div>
+    <h1>REAL EYES</h1>
+    <p id="status">Analyzing image…</p>
+    <script src="loading.js"></script>
+  </body>
+</html>

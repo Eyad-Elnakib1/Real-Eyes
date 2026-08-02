@@ -1,0 +1,32 @@
+{
+  "manifest_version": 3,
+  "name": "Real Eyes",
+  "version": "0.1.0",
+  "description": "Send images, text, or screenshots to Real Eyes from the right-click menu.",
+  "permissions": [
+    "contextMenus",
+    "activeTab",
+    "scripting",
+    "storage",
+    "alarms",
+    "tabs"
+  ],
+  "host_permissions": [
+    "http://127.0.0.1:5001/*",
+    "http://localhost:5001/*"
+  ],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "action": {
+    "default_title": "Real Eyes",
+    "default_popup": "popup.html"
+  },
+  "icons": {
+    "16": "icons/icon.png",
+    "48": "icons/icon1.png",
+    "128": "icons/icon2.png"
+  }
+}
+
