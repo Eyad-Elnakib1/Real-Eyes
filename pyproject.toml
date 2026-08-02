@@ -1,0 +1,27 @@
+[tool.pyright]
+venvPath = "."
+venv = ".venv"
+extraPaths = [
+    "archive/factcheck_ai",
+    "./archive/factcheck_ai",
+    "D:/Downloads/RealEyes/realeyes/archive/factcheck_ai",
+    "D:/Downloads/RealEyes/archive/factcheck_ai",
+    ".venv/Lib/site-packages",
+    "realeyes/.venv/Lib/site-packages",
+    "C:/Users/Eyad Elnakib/AppData/Local/Programs/Python/Python313/Lib/site-packages",
+    "C:/Users/Eyad Elnakib/AppData/Roaming/uv/python/cpython-3.12.12-windows-x86_64-none/Lib/site-packages"
+]
+
+[tool.pyrefly]
+venvPath = "."
+venv = ".venv"
+extraPaths = [
+    "archive/factcheck_ai",
+    "./archive/factcheck_ai",
+    "D:/Downloads/RealEyes/realeyes/archive/factcheck_ai",
+    "D:/Downloads/RealEyes/archive/factcheck_ai",
+    ".venv/Lib/site-packages",
+    "realeyes/.venv/Lib/site-packages",
+    "C:/Users/Eyad Elnakib/AppData/Local/Programs/Python/Python313/Lib/site-packages",
+    "C:/Users/Eyad Elnakib/AppData/Roaming/uv/python/cpython-3.12.12-windows-x86_64-none/Lib/site-packages"
+]
