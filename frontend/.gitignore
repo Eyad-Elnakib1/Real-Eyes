@@ -1,0 +1,67 @@
+# ── Python ──────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+dist/
+build/
+.eggs/
+.pytest_cache/
+htmlcov/
+.coverage
+*.cover
+
+# ── Virtual Environment ────────────────────────────────────
+.venv/
+venv/
+env/
+
+# ── Environment Variables ──────────────────────────────────
+.env
+.env.local
+.env.production
+
+# ── Node ───────────────────────────────────────────────────
+node_modules/
+.next/
+out/
+.turbo/
+
+# ── IDE ────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# ── OS ─────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# ── Docker ─────────────────────────────────────────────────
+docker-compose.override.yml
+
+# ── Data / Models (large files) ────────────────────────────
+*.csv
+*.tsv
+*.parquet
+*.pt
+*.pth
+*.safetensors
+*.onnx
+*.h5
+*.pkl
+*.joblib
+*.bin
+uploads/
+data/
+
+# ── Logs ───────────────────────────────────────────────────
+*.log
+logs/
+
+# ── Misc ───────────────────────────────────────────────────
+*.bak
+*.tmp
