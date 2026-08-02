@@ -1,0 +1,49 @@
+# ══════════════════════════════════════════════════════════════════════════════
+# RealEyes Backend — Consolidated Python Dependencies
+# ══════════════════════════════════════════════════════════════════════════════
+# Install:  pip install -r requirements.txt
+# Post:     python -m spacy download en_core_web_sm
+# ══════════════════════════════════════════════════════════════════════════════
+
+# ── Core ML / Deep Learning ──────────────────────────────────────────────────
+torch>=2.3.0                     # PyTorch backend for all models
+torchvision>=0.18.0              # Image transforms for Swin-V2 classifier
+timm>=1.0.3                      # Pre-trained model registry (Swin, Xception)
+transformers>=4.41.0             # DeBERTa NLI model loading
+
+# ── Computer Vision ──────────────────────────────────────────────────────────
+opencv-python>=4.9.0             # Image/video I/O, morphological ops, frame extraction
+Pillow>=10.3.0                   # PIL image handling
+numpy>=1.26.4                    # Numerical operations
+
+# ── OCR & Text Processing ───────────────────────────────────────────────────
+easyocr>=1.7.1                   # Screenshot text extraction (EN + AR)
+arabic-reshaper>=3.0.0           # Arabic glyph reshaping for display
+python-bidi>=0.6.0               # Bi-directional text algorithm
+
+# ── Web Server ───────────────────────────────────────────────────────────────
+flask>=3.0.0                     # HTTP API server
+flask-cors>=4.0.0                # CORS for extension & dashboard
+
+# ── Fact-Checking Pipeline ───────────────────────────────────────────────────
+sentence-transformers>=3.0.1     # MiniLM-L6 embedder + ms-marco cross-encoder
+httpx>=0.27.0                    # Page download + Wikipedia API
+ddgs>=6.0.0                      # DuckDuckGo search wrapper
+trafilatura>=1.10.0              # Article text extraction from HTML
+
+# ── NLP Utilities ────────────────────────────────────────────────────────────
+spacy>=3.7.0                     # Named-entity extraction (model: en_core_web_sm)
+yake>=0.4.8                      # Statistical keyword extraction
+
+# ── LLM Integration (Arabic translation & claim classification) ──────────────
+groq>=0.11.0                     # Groq Cloud API client (needs GROQ_API_KEY env var)
+
+# ── Visualization ────────────────────────────────────────────────────────────
+matplotlib>=3.8.0                # Report card generation (classification & segmentation)
+
+# ── Prototype / Archive Compatibility ─────────────────────────────────────────
+fastapi>=0.115.0                 # For archived prototype in archive/factcheck_ai
+uvicorn>=0.30.0                  # ASGI server for prototype
+pydantic>=2.9.0                  # Data validation for prototype
+python-multipart>=0.0.12         # Form data handling for prototype
+

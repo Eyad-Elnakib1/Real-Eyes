@@ -1,0 +1,123 @@
+# ============================================================
+# Semantic Web Crawler & Search Engine — Configuration
+# ============================================================
+
+crawler:
+  max_workers: 4                    # parallel async crawl workers
+  max_pages: 5000                   # hard cap per crawl session
+  max_depth: 5                      # max link-hop depth
+  default_delay: 1.0                # seconds between requests (same domain)
+  request_timeout: 15               # seconds per HTTP request
+  max_retries: 3                    # HTTP retry attempts
+  user_agents:
+    - "Mozilla/5.0 (compatible; SemanticBot/1.0; +https://example.com/bot)"
+    - "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 SemanticCrawler/1.0"
+    - "Mozilla/5.0 (Windows NT 10.0; Win64; x64) SemanticSearch/1.0"
+  respect_robots_txt: true
+  relevance_threshold: 0.45         # minimum relevance score to enqueue link
+  priority_boost_domains: []        # domains that get priority scoring boost
+  incremental: true                 # skip already-indexed URLs
+
+frontier:
+  backend: "disk"                   # "redis" | "disk"
+  redis_url: "redis://localhost:6379/0"
+  disk_path: "data/frontier.db"
+  max_queue_size: 100000
+
+downloader:
+  max_content_length: 5242880       # 5 MB hard limit
+  allowed_content_types:
+    - "text/html"
+    - "application/xhtml+xml"
+  follow_redirects: true
+  max_redirects: 5
+
+extractor:
+  min_content_length: 200           # discard pages shorter than this (chars)
+  readability_min_score: 20         # boilerpipe / readability threshold
+
+link_extractor:
+  max_links_per_page: 200
+  allowed_schemes: ["http", "https"]
+  skip_extensions:
+    - ".pdf"
+    - ".jpg"
+    - ".jpeg"
+    - ".png"
+    - ".gif"
+    - ".svg"
+    - ".mp4"
+    - ".mp3"
+    - ".zip"
+    - ".tar"
+    - ".gz"
+    - ".exe"
+
+relevance_classifier:
+  model: "lightweight"              # "lightweight" | "transformer"
+  transformer_model: "cross-encoder/ms-marco-MiniLM-L-6-v2"
+  cache_predictions: true
+
+query_expander:
+  backend: "wordnet"                # "wordnet" | "embeddings" | "llm"
+  llm_model: "claude-sonnet-4-20250514"
+  max_expansions: 5
+  anthropic_api_key: ""             # set via env: ANTHROPIC_API_KEY
+
+seed_urls:
+  search_backend: "duckduckgo"      # "duckduckgo" | "google_api"
+  google_api_key: ""
+  google_cx: ""
+  results_per_query: 10
+
+chunker:
+  strategy: "sentence"              # "fixed" | "semantic" | "sentence"
+  chunk_size: 512                   # tokens / characters per chunk
+  chunk_overlap: 64
+  min_chunk_length: 100
+
+embedder:
+  model: "sentence-transformers/all-MiniLM-L6-v2"
+  batch_size: 64
+  device: "cpu"                     # "cpu" | "cuda"
+  normalize: true
+
+vector_store:
+  backend: "chroma"                 # "chroma" | "faiss"
+  persist_path: "data/vector_db"
+  collection_name: "semantic_web"
+  distance_metric: "cosine"
+  top_k: 20
+
+metadata_store:
+  backend: "sqlite"                 # "sqlite" | "mongodb"
+  sqlite_path: "data/metadata/metadata.db"
+  mongo_uri: "mongodb://localhost:27017"
+  mongo_db: "semantic_crawler"
+
+cache:
+  backend: "disk"                   # "redis" | "disk"
+  redis_url: "redis://localhost:6379/1"
+  disk_path: "data/cache"
+  ttl_seconds: 86400                # 24 hours
+
+search:
+  top_k_retrieval: 30
+  top_k_output: 10
+  reranker_model: "cross-encoder/ms-marco-MiniLM-L-6-v2"
+  enable_reranking: true
+  diversity_threshold: 0.85         # suppress near-duplicate domains
+  min_score: 0.15
+
+api:
+  host: "0.0.0.0"
+  port: 8000
+  reload: false
+  log_level: "info"
+
+logging:
+  level: "INFO"
+  format: "%(asctime)s | %(levelname)-8s | %(name)s | %(message)s"
+  file: "data/crawler.log"
+  max_bytes: 10485760               # 10 MB
+  backup_count: 5

@@ -1,0 +1,43 @@
+{
+    "claim": "micheal jackson is alive",
+    "final_prediction": "SUPPORTS",
+    "confidence": 0.876,
+    "evidence": [
+        {
+            "url": "https://en.wikipedia.org/wiki/Bad_(tour)",
+            "title": "Bad (tour) - Wikipedia",
+            "retrieval_score": 0.3765,
+            "credibility": 1.3,
+            "nli_label": "SUPPORTS",
+            "confidence": 0.8905,
+            "probabilities": {
+                "SUPPORTS": 0.8905,
+                "REFUTES": 0.0834,
+                "NOT ENOUGH INFO": 0.0261
+            },
+            "snippet": "Retrieved March 26, 2023.\n- ^ a b Campbell 1993, p. 216.\n- ^ a b c Halstead 2003, p. 80.\n- ^ Campbell 1993, p. 217.\n- ^ \"Stay up tonight to catch Michael Jackson on tour\". Retrieved October 2, 2010.[permanent dead link]\n- ^ \"1,550 injured at Jackson concert\". Pittsburgh Post-Gazette. Retrieved Septe"
+        },
+        {
+            "url": "https://en.wikipedia.org/wiki/Bad_(tour)",
+            "title": "Bad (tour) - Wikipedia",
+            "retrieval_score": 0.3409,
+            "credibility": 1.3,
+            "nli_label": "SUPPORTS",
+            "confidence": 0.86,
+            "probabilities": {
+                "SUPPORTS": 0.86,
+                "REFUTES": 0.1053,
+                "NOT ENOUGH INFO": 0.0347
+            },
+            "snippet": "Anchorage Daily News. Retrieved September 30, 2010.[permanent dead link]\n- ^ Campbell 1993, p. 189.\n- ^ Pareles, Jon (February 24, 1988). \"Pop: Michael Jackson Opens Tour\". The New York Times.\n- ^ \"Michael Jackson\". Retrieved September 30, 2010.\n- ^ \"130 fans faint at Jackson concert\". Retrieved Sep"
+        }
+    ],
+    "verification": {
+        "verified": false,
+        "independent_sources": 1,
+        "trusted_agree": [],
+        "trusted_contradict": [],
+        "statement": "Leans SUPPORTS, but only low-authority sources agree (1). Treat with caution."
+    },
+    "note": ""
+}

@@ -1,0 +1,65 @@
+[
+  {
+    "user_query": "how does the attention mechanism work in transformers",
+    "evidence": [
+      ["https://en.wikipedia.org/wiki/Attention_(machine_learning)", 0.9231],
+      ["https://en.wikipedia.org/wiki/Transformer_(machine_learning_model)", 0.9047],
+      ["https://en.wikipedia.org/wiki/Large_language_model", 0.8612],
+      ["https://en.wikipedia.org/wiki/BERT_(language_model)", 0.8405],
+      ["https://en.wikipedia.org/wiki/GPT-4", 0.8102],
+      ["https://en.wikipedia.org/wiki/Natural_language_processing", 0.7893],
+      ["https://en.wikipedia.org/wiki/Seq2seq", 0.7541],
+      ["https://arxiv.org/abs/1706.03762", 0.7312],
+      ["https://en.wikipedia.org/wiki/Deep_learning", 0.7104],
+      ["https://en.wikipedia.org/wiki/Neural_machine_translation", 0.6887]
+    ]
+  },
+  {
+    "user_query": "differences between RNN and transformer architectures",
+    "evidence": [
+      ["https://en.wikipedia.org/wiki/Transformer_(machine_learning_model)", 0.9118],
+      ["https://en.wikipedia.org/wiki/Recurrent_neural_network", 0.8974],
+      ["https://en.wikipedia.org/wiki/Long_short-term_memory", 0.8621],
+      ["https://en.wikipedia.org/wiki/Gated_recurrent_unit", 0.8312],
+      ["https://en.wikipedia.org/wiki/Attention_(machine_learning)", 0.8201],
+      ["https://en.wikipedia.org/wiki/Backpropagation_through_time", 0.7854],
+      ["https://en.wikipedia.org/wiki/Vanishing_gradient_problem", 0.7543],
+      ["https://en.wikipedia.org/wiki/Deep_learning", 0.7201]
+    ]
+  },
+  {
+    "user_query": "applications of generative adversarial networks",
+    "evidence": [
+      ["https://en.wikipedia.org/wiki/Generative_adversarial_network", 0.9541],
+      ["https://en.wikipedia.org/wiki/StyleGAN", 0.8932],
+      ["https://en.wikipedia.org/wiki/Deepfake", 0.8714],
+      ["https://en.wikipedia.org/wiki/Image_synthesis", 0.8412],
+      ["https://en.wikipedia.org/wiki/Variational_autoencoder", 0.8123],
+      ["https://en.wikipedia.org/wiki/Generative_model", 0.7891]
+    ]
+  },
+  {
+    "user_query": "reinforcement learning reward function",
+    "evidence": [
+      ["https://en.wikipedia.org/wiki/Reinforcement_learning", 0.9387],
+      ["https://en.wikipedia.org/wiki/Markov_decision_process", 0.8921],
+      ["https://en.wikipedia.org/wiki/Q-learning", 0.8712],
+      ["https://en.wikipedia.org/wiki/Proximal_policy_optimization", 0.8541],
+      ["https://en.wikipedia.org/wiki/Reward_shaping", 0.8214],
+      ["https://en.wikipedia.org/wiki/Deep_reinforcement_learning", 0.8012],
+      ["https://en.wikipedia.org/wiki/AlphaGo", 0.7654]
+    ]
+  },
+  {
+    "user_query": "BERT pre-training objectives",
+    "evidence": [
+      ["https://en.wikipedia.org/wiki/BERT_(language_model)", 0.9621],
+      ["https://en.wikipedia.org/wiki/Large_language_model", 0.9012],
+      ["https://en.wikipedia.org/wiki/GPT-4", 0.8741],
+      ["https://en.wikipedia.org/wiki/Masked_language_model", 0.8512],
+      ["https://en.wikipedia.org/wiki/Transfer_learning", 0.8234],
+      ["https://en.wikipedia.org/wiki/Transformer_(machine_learning_model)", 0.8021],
+      ["https://arxiv.org/abs/1810.04805", 0.7893]
+    ]
+  }
+]

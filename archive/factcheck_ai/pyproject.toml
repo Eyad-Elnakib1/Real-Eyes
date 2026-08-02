@@ -1,0 +1,27 @@
+[tool.pyright]
+venvPath = "../../"
+venv = ".venv"
+extraPaths = [
+    ".",
+    "D:/Downloads/RealEyes/realeyes/archive/factcheck_ai",
+    "../../backend",
+    "../../backend/models/classification",
+    "../../backend/fact_checker",
+    "../../backend/screenshot",
+    "D:/Downloads/RealEyes/.venv/Lib/site-packages",
+    "D:/Downloads/RealEyes/realeyes/.venv/Lib/site-packages"
+]
+
+[tool.pyrefly]
+venvPath = "../../"
+venv = ".venv"
+extraPaths = [
+    ".",
+    "D:/Downloads/RealEyes/realeyes/archive/factcheck_ai",
+    "../../backend",
+    "../../backend/models/classification",
+    "../../backend/fact_checker",
+    "../../backend/screenshot",
+    "D:/Downloads/RealEyes/.venv/Lib/site-packages",
+    "D:/Downloads/RealEyes/realeyes/.venv/Lib/site-packages"
+]
